@@ -1,3 +1,57 @@
 body {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+
+  &__container {
+    padding: 24px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  &__logo {
+    line-height: 0;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    height: 24px;
+    line-height: 0;
+  }
+
+  &__phone {
+    line-height: 0;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__menu {
+    line-height: 0;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+  }
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../images/Cover_photo.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
