@@ -2,19 +2,19 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 .header {
   position: fixed;
   width: 100%;
+  z-index: 10;
 
   &__container {
     padding: 24px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
   }
 
   &__logo {
@@ -48,10 +48,24 @@ body {
 }
 
 .hero {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   background-image: url('../images/Cover_photo.png');
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  &__text {
+    margin: 0;
+    margin-bottom: 88px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 100%;
+    letter-spacing: 0.23px;
+  }
 }
