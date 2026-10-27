@@ -1,14 +1,20 @@
+// #region Page
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Poppins, sans-serif;
+  background-color: #1d1d1d;
 }
 
+// #endregion
+
+// #region Header
 .header {
   position: fixed;
   width: 100%;
   z-index: 10;
+  backdrop-filter: blur(10px);
 
   &__container {
     padding: 24px 20px;
@@ -34,19 +40,25 @@ body {
     line-height: 0;
     width: 24px;
     height: 24px;
+    cursor: pointer;
   }
 
-  &__menu {
+  &__menu-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     line-height: 0;
     width: 24px;
     height: 24px;
     padding: 0;
     margin: 0;
-    border: none;
-    background: none;
+    cursor: pointer;
   }
 }
 
+// #endregion
+
+// #region Hero
 .hero {
   position: relative;
   width: 100%;
@@ -69,3 +81,239 @@ body {
     letter-spacing: 0.23px;
   }
 }
+
+// #endregion
+
+// #region Menu
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  border-radius: 0 50% 50% 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 11;
+  background: #c2c2c2;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+
+  &__container {
+    padding: 24px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    line-height: 0;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    line-height: 0;
+  }
+
+  &__menu-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &:target {
+    opacity: 1;
+    left: 0;
+    border-radius: 0;
+    pointer-events: all;
+  }
+}
+
+.nav {
+  padding: 0;
+  margin-top: 24px;
+  margin-left: 20px;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__item {
+    list-style: none;
+    line-height: 1;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #1d1d1d;
+    letter-spacing: 2px;
+    line-height: 22px;
+  }
+}
+
+.phone-cta {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-left: 20px;
+
+  &__number {
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #1d1d1d;
+    line-height: 27px;
+    letter-spacing: 0;
+  }
+
+  &__ride {
+    position: relative;
+    width: max-content;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      left: 0;
+      bottom: -8px;
+      background-color: #1d1d1d;
+    }
+  }
+}
+
+// #endregion
+
+// #region About
+.about {
+  display: flex;
+  flex-direction: column;
+
+  padding: 60px 20px;
+
+  &__title {
+    display: block;
+    font-weight: 500;
+    font-size: 32px;
+    color: #fff;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 23px;
+    color: #fff;
+    line-height: 140%;
+    letter-spacing: 0;
+  }
+}
+
+// #endregion
+
+// #region Compare
+.compare {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.5px;
+    color: #fff;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__img {
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      margin: 0;
+      color: #fff;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      letter-spacing: 0;
+    }
+
+    &__description {
+      margin-top: 8;
+      margin-bottom: 16px;
+      font-weight: 400;
+      font-size: 16px;
+      color: #fff;
+      letter-spacing: 0;
+      line-height: 140%;
+    }
+  }
+}
+
+// #endregion
+
+// #region Details
+.details {
+  padding: 80px 20px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 48px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.5px;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+
+      &img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+// #endregion

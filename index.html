@@ -17,6 +17,7 @@
     ></script>
   </head>
   <body>
+    <!-- #region Header -->
     <header class="header">
       <div class="header__container">
         <a
@@ -29,16 +30,207 @@
           />
         </a>
         <div class="header__right">
-          <span class="header__phone"><img src="src/images/Icon-Phone-call.png" alt="phone-img"></span>
-          <button class="header__menu"><img src="src/images/Vector.png" alt="menu-img"></button>
+          <span class="header__phone">
+            <img
+              src="src/images/Icon-Phone-call.png"
+              alt="phone-img"
+            />
+          </span>
+          <a
+            href="#menu"
+            class="header__menu-open"
+          >
+            <img
+              src="src/images/Vector.png"
+              alt="menu-img"
+            />
+          </a>
         </div>
       </div>
     </header>
-    <div class="hero">
+    <!-- #endregion -->
+
+    <!-- #region Hero -->
+    <div
+      class="hero"
+      id="home"
+    >
       <h1 class="hero__text">Take the Streets</h1>
     </div>
-    <aside class="aside">
-      
+    <!-- #endregion -->
+
+    <!-- #region Menu -->
+    <aside
+      class="menu"
+      id="menu"
+    >
+      <div class="menu__container">
+        <a
+          href="#"
+          class="menu__logo"
+        >
+          <img
+            src="src/images/MyBiKE-open-menu.png"
+            alt="menu-logo"
+          />
+        </a>
+        <div class="menu__right">
+          <a
+            href="#"
+            class="menu__menu-close"
+          >
+            <img
+              src="src/images/Icon-Close.png"
+              alt="close-menu-img"
+            />
+          </a>
+        </div>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a
+              href="#home"
+              class="nav__link"
+            >
+              Home
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#about"
+              class="nav__link"
+            >
+              About Us
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#compare"
+              class="nav__link"
+            >
+              Compare Bikes
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#details"
+              class="nav__link"
+            >
+              Details
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#contacts"
+              class="nav__link"
+            >
+              Contacts
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="phone-cta">
+        <a
+          class="phone-cta__number"
+          href="tell"
+        >
+          +1 234 5555-55-55
+        </a>
+        <p class="phone-cta__ride">Book a test ride</p>
+      </div>
     </aside>
+
+    <!-- #endregion -->
+
+    <!-- #region About -->
+    <section
+      class="about"
+      id="about"
+    >
+      <h2 class="about__title">Move Free</h2>
+      <p class="about__description">
+        Shift your ride, not gears. Find the fastest way to move in the city as
+        the bike adapts intuitively to power the speed you need.
+      </p>
+    </section>
+    <!-- #endregion -->
+
+    <!-- #region Compare -->
+    <section
+      class="compare"
+      id="compare"
+    >
+      <h2 class="compare__title">Compare bikes</h2>
+      <div class="compare__card">
+        <img
+          class="compare__card__img"
+          src="src/images/Screenshot 2022-01-14 at 11.12 1.svg"
+          alt="bike__png"
+        />
+        <h3 class="compare__card__title">Sporty 4</h3>
+        <p class="compare__card__description">
+          The iconic frame brought to a new performance height as a sporty,
+          active ride.
+        </p>
+        <h3 class="compare__card__title">$ 2 590</h3>
+      </div>
+      <div class="compare__card">
+        <img
+          class="compare__card__img"
+          src="src/images/Screenshot 2022-01-14 at 11.12 2.png"
+          alt="bike__png"
+        />
+        <h3 class="compare__card__title">Ride in town ST</h3>
+        <p class="compare__card__description">
+          An open frame for an upright riding position as the most comfortable
+          ride in town.
+        </p>
+        <h3 class="compare__card__title">$ 2 590</h3>
+      </div>
+      <div class="compare__card">
+        <img
+          class="compare__card__img"
+          src="src/images/Screenshot 2022-01-14 at 11.12 3.png"
+          alt="bike__png"
+        />
+        <h3 class="compare__card__title">Agile ride 3</h3>
+        <p class="compare__card__description">
+          The lightweight frame that has earned its street tread as a sleek,
+          agile ride.
+        </p>
+        <h3 class="compare__card__title">$ 2 090</h3>
+      </div>
+    </section>
+    <!-- #endregion -->
+
+    <!-- #region Details-->
+    <section
+      class="details"
+      id="details"
+    >
+      <div class="details__card">
+        <h2 class="details__title">The Details</h2>
+        <div class="details__card__wrapper">
+          <img
+            class="details__card__wrapper__left"
+            src="/src/images/Image.png"
+            alt="card__img"
+          />
+          <img
+            class="details__card__wrapper__right"
+            src="/src/images/image 8.png"
+            alt="card__img"
+          />
+        </div>
+        <h3 class="details__card__title">Auto Unlock</h3>
+        <p class="details__card__description">
+          The app senses when you're nearby to unlock automatically. GPS
+          tracking so you know where your bike is and can track it anytime.
+        </p>
+      </div>
+    </section>
+    <!-- #endregion -->
   </body>
 </html>
